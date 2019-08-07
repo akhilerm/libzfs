@@ -1,6 +1,6 @@
 use libzfs_sys::raw::{
     libzfs_error_description, libzfs_fini, libzfs_handle_t, libzfs_init, nvlist_t, nvpair_t,
-    zfs_create, zfs_destroy, zfs_open, zfs_type_t_ZFS_TYPE_FILESYSTEM,
+    zfs_create, zfs_destroy, zfs_iter_filesystems, zfs_open, zfs_type_t_ZFS_TYPE_FILESYSTEM,
 };
 
 use crate::nvlist::Nvlist;
