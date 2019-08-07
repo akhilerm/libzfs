@@ -96,7 +96,7 @@ impl LibZfs {
                 std::ptr::null(),
             )
         };
-
+        ret
     }
 
     /*// function to get the iterator
