@@ -87,6 +87,24 @@ impl LibZfs {
             Ok(())
         }
     }
+
+    // returns a vector of name of datasets
+    pub fn list_filesystems(&self) -> Result<Vec<String>, String> {
+        let ret = unsafe {
+            zfs_iter_filesystems(
+                self.inner,
+                std::ptr::null(),
+            )
+        };
+
+    }
+
+    /*// function to get the iterator
+    pub fn zfs_iterator(&self) -> Result<u32, String> {
+        let ret = unsafe {
+
+        }
+    }*/
 }
 
 #[test]
